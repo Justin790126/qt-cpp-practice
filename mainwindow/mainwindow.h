@@ -2,7 +2,12 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
+#include <QMenuBar>
+#include <QSpinBox>
+#include <QSlider>
+#include <QLabel>
+#include <QVBoxLayout>
+#include <QStatusBar>
 namespace Ui {
     class MainWindow;
 }
@@ -16,6 +21,9 @@ public:
     ~MainWindow();
 
 private:
+    void createMenuBar();
+    void createStatusBar();
+    void createContent(QWidget *centralWidget, QHBoxLayout *mainLayout);
     Ui::MainWindow* ui;
 };
 
