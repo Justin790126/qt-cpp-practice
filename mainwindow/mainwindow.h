@@ -8,6 +8,13 @@
 #include <QLabel>
 #include <QVBoxLayout>
 #include <QStatusBar>
+#include <QFontComboBox>
+#include <QComboBox>
+#include <QToolButton>
+#include <QTextBrowser>
+#include <QTextEdit>
+#include <QTableWidget>
+#include <QSplitter>
 namespace Ui {
     class MainWindow;
 }
