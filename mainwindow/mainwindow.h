@@ -15,23 +15,41 @@
 #include <QTextEdit>
 #include <QTableWidget>
 #include <QSplitter>
-namespace Ui {
-    class MainWindow;
-}
+#include <QMessageBox>
+#include <QFileDialog>
+#include <QToolBar>
 
 class MainWindow: public QMainWindow
 {
-    Q_OBJECT
+    
 
 public:
-    explicit MainWindow(QWidget* parent = 0);
+    MainWindow();
     ~MainWindow();
 
 private:
-    void createMenuBar();
-    void createStatusBar();
-    void createContent(QWidget *centralWidget, QHBoxLayout *mainLayout);
-    Ui::MainWindow* ui;
+    QMenuBar* _menuBar;
+    QMenu* _file;
+
+    void menuBar();
+    void toolBar();
+    void statusBar();
+
+    void UI();
+    void widgets();
+    void layouts();
+
+    QToolBar* _toolBar;
+
+    QWidget* _centralWidget;
+
+    QStatusBar* _statusBar;
+
+
+
+
+private slots:
+    void openFile();
 };
 
 #endif // !MAINWINDOW_H
